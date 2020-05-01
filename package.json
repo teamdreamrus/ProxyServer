@@ -1,0 +1,32 @@
+{
+  "name": "proxyserver",
+  "version": "1.0.0",
+  "description": "Proxy Server ",
+  "main": "index.js",
+  "scripts": {
+    "test": "node source/test.js",
+    "dev": "node source/index.js",
+    "testFrom": "node source/testFromInternet.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teamdreamrus/ProxyServer.git"
+  },
+  "author": "AlexeyTop1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teamdreamrus/ProxyServer/issues"
+  },
+  "homepage": "https://github.com/teamdreamrus/ProxyServer#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "geoip-country": "^4.0.14",
+    "geoip-lite": "^1.4.1",
+    "proxy-checker": "^1.0.0",
+    "proxy-lists": "^1.20.2",
+    "proxy-source": "0.0.0",
+    "proxy-verifier": "^0.4.1",
+    "request": "^2.88.2"
+  }
+}

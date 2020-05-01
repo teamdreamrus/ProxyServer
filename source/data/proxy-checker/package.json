@@ -1,0 +1,77 @@
+{
+  "_args": [
+    [
+      "proxy-checker",
+      "/var/proxy"
+    ]
+  ],
+  "_from": "proxy-checker@latest",
+  "_id": "proxy-checker@1.0.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/proxy-checker",
+  "_npmUser": {
+    "email": "sebastien.castiel@gmail.com",
+    "name": "scastiel"
+  },
+  "_npmVersion": "1.4.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "proxy-checker",
+    "raw": "proxy-checker",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/proxy-checker/-/proxy-checker-1.0.0.tgz",
+  "_shasum": "c8c2f2946c863cc281afc04ac37443a80e01ba32",
+  "_shrinkwrap": null,
+  "_spec": "proxy-checker",
+  "_where": "/var/proxy",
+  "author": {
+    "email": "sebastien.castiel@gmail.com",
+    "name": "Sébastien Castiel"
+  },
+  "bugs": {
+    "url": "https://github.com/scastiel/node-proxy-checker/issues"
+  },
+  "dependencies": {
+    "readline": "0.0.3",
+    "request": "^2.36.0",
+    "stream": "0.0.1"
+  },
+  "description": "Module which checks a big number of proxy servers.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "c8c2f2946c863cc281afc04ac37443a80e01ba32",
+    "tarball": "https://registry.npmjs.org/proxy-checker/-/proxy-checker-1.0.0.tgz"
+  },
+  "homepage": "https://github.com/scastiel/node-proxy-checker",
+  "keywords": [
+    "checker",
+    "proxies",
+    "proxy",
+    "proxy server"
+  ],
+  "license": "LGPL",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "scastiel",
+      "email": "sebastien.castiel@gmail.com"
+    }
+  ],
+  "name": "proxy-checker",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scastiel/node-proxy-checker.git"
+  },
+  "version": "1.0.0"
+}

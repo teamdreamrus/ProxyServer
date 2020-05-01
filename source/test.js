@@ -90,30 +90,34 @@ let proxiesResultOk = [];
 // `getProxies` returns an event emitter.
 ProxyLists.getProxies({
     // options
+    protocols: ['socks5']
 })
     .on('data', function (proxies) {
         // Received some proxies.
         // console.log('got some proxies');
-        // console.log(proxies);
+        console.log(proxies);
         proxies.forEach(el => {
             let proxy = {
                 ipAddress: el.ipAddress,
                 port: +el.port,
-                protocol: el.protocols[0]
+                protocol: 'socks5'
             };
 
             if (proxy.ipAddress && proxy.port && proxy.protocol) {
+                let timeSpeed = new Date();
                 ProxyVerifier.testProtocol(proxy, {}, function (error, result) {
-
                     if (error) {
                         // console.log(error.code)
                         // Some unusual error occurred.
                     } else {
                         // The result object will contain success/error information.
+                        console.log(result);
                         if (result.ok) {
                             let geo = geoip.lookup(proxy.ipAddress);
                             if (geo.country) {
                                 proxy.country = geo.country;
+                                proxy.timer = new Date() - timeSpeed;
+
                                 proxiesResultOk.push(proxy);
                                 // console.log(proxy);
                             }
@@ -137,6 +141,7 @@ ProxyLists.getProxies({
         // Done getting proxies.
         console.log('end!');
         console.log('results');
+        sortByTimer(proxiesResultOk);
         console.log(proxiesResultOk);
         let countries = {
             Russia: 0,
@@ -172,6 +177,10 @@ ProxyLists.getProxies({
                     break;
                 }
             }
+            if(el.protocol==='https') console.log('https');
         });
     console.log(countries);
     });
+function sortByTimer(arr) {
+    arr.sort((a, b) => a.timer > b.timer ? 1 : -1);
+}
